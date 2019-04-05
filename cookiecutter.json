@@ -1,0 +1,10 @@
+{
+    "name": "project",
+    "user": "anonymous",
+    "email": "anon@local",
+    "author": "anonymous",
+    "python": "3.6",
+    "license": "GPL-3.0",
+    "control": "github.com",
+    "homepage": "https://{{cookiecutter.control}}/{{cookiecutter.user}}/{{cookiecutter.name}}"
+}
