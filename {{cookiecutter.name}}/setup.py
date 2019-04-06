@@ -4,7 +4,7 @@ import setuptools  # type: ignore
 
 info = dict(
     name="{{cookiecutter.name}}",
-    version="0.5.0",
+    version="0.1.0",
     description="TODO: write a description",
     long_description=open("README.md", "r").read(),
     long_description_content_type="text/markdown",
