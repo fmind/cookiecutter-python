@@ -13,10 +13,9 @@ info = dict(
     author_email="{{cookiecutter.email}}",
     license="{{cookiecutter.license}}",
     packages=["{{cookiecutter.name}}"],
-    keywords="sample development package",
+    keywords="sample package development",
     classifiers=["Development Status :: 4 - Beta"],
     entry_points={"console_scripts": ["{{cookiecutter.name}}={{cookiecutter.name}}.__main__:main"]},
-    tests_require=["tox"],
     python_requires=">={{cookiecutter.python}}",
     install_requires=[],
 )
