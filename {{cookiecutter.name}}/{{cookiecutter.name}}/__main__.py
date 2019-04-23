@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Entry point of the project"""
+
+"""Entry point of the project."""
 
 import argparse
 

@@ -15,8 +15,8 @@ info = dict(
     packages=["{{cookiecutter.name}}"],
     keywords="sample development package",
     classifiers=["Development Status :: 4 - Beta"],
-    entry_points={"console_scripts": ["{{cookiecutter.name}}={{cookiecutter.name}}.__main__:main "]},
-    setup_requires=["tox"],
+    entry_points={"console_scripts": ["{{cookiecutter.name}}={{cookiecutter.name}}.__main__:main"]},
+    tests_require=["tox"],
     python_requires=">={{cookiecutter.python}}",
     install_requires=[],
 )
