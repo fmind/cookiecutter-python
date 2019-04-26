@@ -1,9 +1,6 @@
 PACKAGE=$(shell python setup.py --name)
   
-all: test type lint sort format addall distribute;
-
-hook:
-	git config core.hooksPath hooks/
+all: test type lint sort format package;
 
 venv:
 	python -m venv venv --clear
@@ -25,21 +22,24 @@ sort: venv
 format: venv
 	venv/bin/black --quiet --line-length 79 ${PACKAGE}
 
-addall:
+add:
 	git add --all ${PACKAGE}/*.py
 
-cleanall:
+hook:
+	git config core.hooksPath hooks/
+
+clean:
 	find . -name '*.whl' -exec rm -f {} +
-	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
+	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.egg' -exec rm -f {} +
 	find . -name '*.egg-info' -exec rm -fr {} +
 	find . -name '__pycache__' -exec rm -fr {} +
 	find . -name '.mypy_cache' -exec rm -fr {} +
 	find . -name '.pytest_cache' -exec rm -fr {} +
 
-distribute: venv
+package: venv
 	venv/bin/python setup.py bdist_wheel --universal
 
-publish: cleanall distribute
-	.venv/bin/twine upload -r pypi dist/*.whl
+publish: clean package
+	venv/bin/twine upload --repository pypi dist/*.whl

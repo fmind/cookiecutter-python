@@ -2,7 +2,7 @@
 
 import setuptools  # type: ignore
 
-info = dict(
+INFO = dict(
     name="{{cookiecutter.name}}",
     version="0.1.0",
     description="TODO: write a description",
@@ -21,4 +21,4 @@ info = dict(
 )
 
 if __name__ == "__main__":
-    setuptools.setup(**info)
+    setuptools.setup(**INFO)
