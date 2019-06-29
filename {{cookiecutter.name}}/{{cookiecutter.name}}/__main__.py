@@ -4,12 +4,12 @@
 
 import argparse
 
-parser = argparse.ArgumentParser(description=__doc__)
+PARSER = argparse.ArgumentParser(description=__doc__)
 
 
 def main(args=None):
     """Entry point of the script."""
-    opts = parser.parse_args(args)
+    opts = PARSER.parse_args(args)
 
     print(opts)
 
