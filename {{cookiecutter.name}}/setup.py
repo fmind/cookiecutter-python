@@ -2,7 +2,7 @@
 
 import setuptools  # type: ignore
 
-meta = dict(
+META = dict(
     name="{{cookiecutter.name}}",
     version="0.1.0",
     description="TODO: write a description",
@@ -21,4 +21,4 @@ meta = dict(
 )
 
 if __name__ == "__main__":
-    setuptools.setup(**meta)
+    setuptools.setup(**META)
