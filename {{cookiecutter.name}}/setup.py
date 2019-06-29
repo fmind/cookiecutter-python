@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import setuptools  # type: ignore
 
-INFO = dict(
+meta = dict(
     name="{{cookiecutter.name}}",
     version="0.1.0",
     description="TODO: write a description",
@@ -21,4 +21,4 @@ INFO = dict(
 )
 
 if __name__ == "__main__":
-    setuptools.setup(**INFO)
+    setuptools.setup(**meta)
