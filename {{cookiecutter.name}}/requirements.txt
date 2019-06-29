@@ -1,5 +1,6 @@
 black
 isort
+hypothesis
 mypy
 pip>=18
 pylint
