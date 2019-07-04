@@ -1,9 +1,9 @@
-PACKAGE=$(shell python setup.py --name)
+PACKAGE=$(shell ./setup.py --name)
   
 all: test type lint sort format package;
 
 venv:
-	python -m venv venv --clear
+	python{{cookiecutter.python}} -m venv venv --clear
 	venv/bin/pip install --editable .
 	venv/bin/pip install -r requirements.txt
 
