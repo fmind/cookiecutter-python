@@ -1,4 +1,5 @@
 black
+coverage
 isort
 hypothesis
 mypy

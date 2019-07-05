@@ -1,6 +1,6 @@
 PACKAGE=$(shell ./setup.py --name)
   
-all: test type lint sort format package;
+all: test type lint sort cover format package;
 
 venv:
 	python{{cookiecutter.python}} -m venv venv --clear
@@ -18,6 +18,10 @@ lint: venv
 
 sort: venv
 	venv/bin/isort --apply --recursive ${PACKAGE}
+
+cover: venv
+	venv/bin/coverage run --branch --source ${PACKAGE} -m pytest
+	venv/bin/coverage report --skip-covered --fail-under=66
 
 format: venv
 	venv/bin/black --quiet --line-length 79 ${PACKAGE}
