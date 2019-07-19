@@ -3,7 +3,7 @@ PACKAGE=$(shell ./setup.py --name)
 all: test type lint sort cover format package;
 
 venv:
-	python{{cookiecutter.python}} -m venv venv --clear
+	python3 -m venv venv --clear
 	venv/bin/pip install --editable .
 	venv/bin/pip install -r requirements.txt
 
