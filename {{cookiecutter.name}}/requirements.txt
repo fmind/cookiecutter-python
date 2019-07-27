@@ -1,6 +1,7 @@
 black
 coverage
 docutils
+invoke
 ipdb
 ipython
 isort
