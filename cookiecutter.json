@@ -4,7 +4,6 @@
     "email": "anon@local",
     "author": "anonymous",
     "python": "3.7",
-    "license": "LGPL-3.0",
-    "control": "github.com",
-    "repository": "https://{{cookiecutter.control}}/{{cookiecutter.user}}/{{cookiecutter.name}}"
+    "license": "MIT",
+    "repository": "https://github.com/{{cookiecutter.user}}/{{cookiecutter.name}}"
 }

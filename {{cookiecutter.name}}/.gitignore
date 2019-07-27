@@ -1,10 +1,11 @@
-.coverage
 *.egg-info/
 *.py[cod]
 .cache/
+.coverage
 .eggs/
 .mypy_cache/
 .pytest_cache/
+.ipynb_checkpoints/
 __pycache__/
 build/
 dist/
