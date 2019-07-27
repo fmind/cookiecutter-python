@@ -86,7 +86,7 @@ def deploy(c):
     c.run('venv/bin/twine upload --repository pypi dist/*.whl')
 
 
-@task(type, lint, test, cover, isort, format, build)
+@task(venv, type, lint, test, cover, isort, format, build)
 def commit(c):
     """Trigger the tasks run before each repository commit."""
     c.run('git add --all {}/*.py'.format(META["name"]))
