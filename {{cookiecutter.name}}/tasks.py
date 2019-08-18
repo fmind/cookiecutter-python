@@ -50,10 +50,17 @@ def format(c):
     c.run('venv/bin/black --quiet {}'.format(META["name"]))
 
 
+@task(venv)
+def docs(c):
+    """Make the documentation of the project."""
+    c.run('venv/bin/pdoc --html --overwrite '
+          '--html-dir docs --all-submodules {}'.format(META["name"]))
+
+
 @task
 def hook(c):
     """Generate commit hooks for the project."""
-    c.run('git config core.hooksPath hooks/')
+    c.run('cp hooks/pre-commit .git/hooks/pre-commit')
 
 
 @task
@@ -86,7 +93,7 @@ def deploy(c):
     c.run('venv/bin/twine upload --repository pypi dist/*.whl')
 
 
-@task(venv, type, lint, test, cover, isort, format, build)
+@task(venv, type, lint, test, cover, isort, format, docs, build)
 def commit(c):
     """Trigger the tasks run before each repository commit."""
     c.run('git add --all {}/*.py'.format(META["name"]))

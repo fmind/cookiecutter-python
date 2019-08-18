@@ -6,6 +6,7 @@ ipdb
 ipython
 isort
 mypy
+pdoc
 pip>=18
 pylint
 pytest
