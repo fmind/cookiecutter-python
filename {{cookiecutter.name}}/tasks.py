@@ -96,4 +96,4 @@ def deploy(c):
 @task(venv, type, lint, test, cover, isort, format, docs, build)
 def commit(c):
     """Trigger the tasks run before each repository commit."""
-    c.run('git add --all {}/*.py'.format(META["name"]))
+    c.run('git add --all docs {}/*.py'.format(META["name"]))
