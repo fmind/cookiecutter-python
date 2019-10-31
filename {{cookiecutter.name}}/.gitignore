@@ -1,8 +1,8 @@
 *.egg-info/
 *.py[cod]
-.cache/
 .coverage
 .eggs/
+.cache/
 .mypy_cache/
 .pytest_cache/
 .ipynb_checkpoints/

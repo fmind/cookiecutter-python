@@ -9,7 +9,9 @@ mypy
 pdoc
 pip>=18
 pylint
+pynvim
 pytest
 setuptools>=40
 twine
 wheel
+watchdog

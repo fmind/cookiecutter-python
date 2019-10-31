@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+"""Setup file of the project."""
+
 import setuptools  # type: ignore
 
 META = dict(

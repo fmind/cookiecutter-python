@@ -1,3 +1,5 @@
+"""Tasks of the project."""
+
 from setup import META
 from invoke import task
 from pathlib import Path
@@ -10,7 +12,7 @@ def venv(c, force=False):
         return None
     c.run("python3 -m venv venv --clear")
     c.run("venv/bin/pip install --editable .")
-    c.run("venv/bin/pip install --requirement requirements.txt")
+    c.run("venv/bin/pip install -r requirements.txt")
 
 
 @task(venv)
