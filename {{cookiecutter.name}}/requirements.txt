@@ -1,17 +1,25 @@
-black
-coverage
-docutils
-invoke
-ipdb
-ipython
-isort
-mypy
-pdoc
-pip>=18
-pylint
-pynvim
-pytest
-setuptools>=40
-twine
+# init
 wheel
-watchdog
+pip>=18
+setuptools>=40
+# edit
+pynvim
+# test
+coverage
+pylint
+pytest
+# type
+mypy
+# debug
+ipdb
+# format
+black
+isort
+# develop
+invoke
+ipython
+# publish
+twine
+# document
+pdoc
+docutils
