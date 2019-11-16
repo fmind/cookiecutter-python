@@ -4,6 +4,7 @@
 
 import setuptools  # type: ignore
 
+
 META = dict(
     name="{{cookiecutter.name}}",
     version="0.1.0",
