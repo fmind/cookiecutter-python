@@ -1,7 +1,7 @@
 # init
 wheel
-pip>=18
-setuptools>=40
+pip>=19
+setuptools>=41
 # edit
 pynvim
 # lint
@@ -10,15 +10,17 @@ pylint
 pytest
 # type
 mypy
-# cover
-coverage
+# sort
+isort
 # debug
 ipdb
+# cover
+coverage
 # format
 black
-isort
-# develop
+# execute
 invoke
+# interact
 ipython
 # publish
 twine
