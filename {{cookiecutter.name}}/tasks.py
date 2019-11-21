@@ -7,9 +7,9 @@ from invoke import task
 from setup import META
 
 @task
-def venv(c, force=False):
+def venv(c):
     """Create a virtual environment."""
-    if not Path("venv").exists() or force:
+    if not Path("venv").exists():
         c.run("python3 -m venv venv --clear")
         c.run("venv/bin/pip install --editable .")
         c.run("venv/bin/pip install -r requirements.txt")
