@@ -4,7 +4,6 @@ pip>=19
 setuptools>=41
 # lint
 pylint
-pydocstyle
 # test
 pytest
 # type
