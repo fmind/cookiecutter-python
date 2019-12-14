@@ -2,8 +2,6 @@
 wheel
 pip>=19
 setuptools>=41
-# edit
-pynvim
 # lint
 pylint
 # test
