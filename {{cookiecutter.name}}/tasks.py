@@ -30,12 +30,6 @@ def lint(c):
     c.run('venv/bin/pylint {}'.format(META["name"]))
 
 @task(venv)
-def docs(c):
-    """Generate the docs of the project."""
-    c.run('venv/bin/pdoc --html --overwrite '
-          '--html-dir docs --all-submodules {}'.format(META["name"]))
-
-@task(venv)
 def isort(c):
     """Order the imports of the project."""
     c.run('venv/bin/isort --apply --recursive {}'.format(META["name"]))
@@ -47,9 +41,25 @@ def cover(c):
     c.run('venv/bin/coverage report --omit=*/__main__.py --fail-under=0')
 
 @task(venv)
+def unused(c):
+    """Format the source code of the project."""
+    c.run('venv/bin/vulture --sort-by-size {}'.format(META["name"]))
+
+@task(venv)
+def secure(c):
+    """Format the source code of the project."""
+    c.run('venv/bin/bandit --recursive {}'.format(META["name"]))
+
+@task(venv)
 def format(c):
     """Format the source code of the project."""
     c.run('venv/bin/black --quiet {}'.format(META["name"]))
+
+@task(venv)
+def document(c):
+    """Generate the docs of the project."""
+    c.run('venv/bin/pdoc --html --overwrite '
+          '--html-dir docs --all-submodules {}'.format(META["name"]))
 
 @task
 def hooks(c):
@@ -92,7 +102,7 @@ def deploy(c):
     """Build and push the wheel package to Pypi index."""
     c.run('venv/bin/twine upload --repository pypi dist/*.whl')
 
-@task(venv, lint, type, test, cover, docs, isort, format, build)
+@task(venv, lint, type, test, cover, isort, unused, secure, format, build, document)
 def commit(c):
     """Trigger the tasks run before each repository commit."""
     c.run('git add --all docs {}/*.py'.format(META["name"]))

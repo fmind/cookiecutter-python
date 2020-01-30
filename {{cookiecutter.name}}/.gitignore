@@ -1,10 +1,10 @@
 *.egg-info/
 *.py[cdo]
-.coverage
 .cache/
-__pycache__/
+.coverage
 .mypy_cache/
 .pytest_cache/
+__pycache__/
 build/
 dist/
 venv/

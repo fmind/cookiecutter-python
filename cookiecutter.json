@@ -6,7 +6,6 @@
     "control": "github.com",
     "keywords": "example package keywords",
     "description": "TODO: Write a description",
-    "url": "https://{{cookiecutter.control}}/{{cookiecutter.user}}/{{cookiecutter.name}}",
     "python": "3.6",
     "version": "0.1.0",
     "status": "4 - Beta",

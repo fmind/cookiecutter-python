@@ -14,8 +14,12 @@ isort
 ipdb
 # cover
 coverage
+# unused
+vulture
 # format
 black
+# secure
+bandit
 # execute
 invoke
 # interact
