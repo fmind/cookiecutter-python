@@ -2,6 +2,7 @@
 
 import pytest  # type: ignore
 
+
 def test_success():
     assert 1 + 1 == 2
 
