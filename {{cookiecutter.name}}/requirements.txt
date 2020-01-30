@@ -1,7 +1,7 @@
 # init
 wheel
-pip>=19
-setuptools>=41
+pip>=20
+setuptools>=45
 # lint
 pylint
 # test
