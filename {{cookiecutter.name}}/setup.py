@@ -7,8 +7,8 @@ import setuptools  # type: ignore
 
 META = dict(
     name="{{cookiecutter.name}}",
-    version="{{cookiecutter.version}}",
-    description="{{cookiecutter.description}}",
+    version="0.1.0",
+    description="TODO: Write a description",
     long_description=open("README.md", "r").read(),
     long_description_content_type="text/markdown",
     url="https://{{cookiecutter.control}}/{{cookiecutter.user}}/{{cookiecutter.name}}",
@@ -16,8 +16,8 @@ META = dict(
     author_email="{{cookiecutter.email}}",
     license="{{cookiecutter.license}}",
     packages=["{{cookiecutter.name}}"],
-    keywords="{{cookiecutter.keywords}}",
-    classifiers=["Development Status :: {{cookiecutter.status}}"],
+    keywords="example package keywords",
+    classifiers=["Development Status :: 4 - Beta"],
     entry_points={"console_scripts": ["{{cookiecutter.name}}={{cookiecutter.name}}.__main__:main"]},
     python_requires=">={{cookiecutter.python}}",
     install_requires=[],
