@@ -4,12 +4,13 @@
 
 import argparse
 
-PARSER = argparse.ArgumentParser(description=__doc__)
+parser = argparse.ArgumentParser(description=__doc__)
 
 
 def main(args=None):
     """Main script of the project."""
-    opts = PARSER.parse_args(args)
+    opts = parser.parse_args(args)
+
     print(opts)
 
 

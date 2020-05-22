@@ -78,7 +78,7 @@ def document(c):
 def hooks(c):
     """Generate the git hooks for the project."""
     pre_commit = Path(".git/hooks/pre-commit")
-    pre_commit.touch(0o700)
+    pre_commit.touch(0o700)  # make the book executable
     pre_commit.write_text(("#!/bin/sh\n\n" "venv/bin/inv commit"))
 
 

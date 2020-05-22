@@ -22,9 +22,9 @@ black
 bandit
 # execute
 invoke
-# interact
-ipython
 # publish
 twine
+# interact
+ipython
 # document
 pdoc
