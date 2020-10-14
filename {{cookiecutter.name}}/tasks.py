@@ -12,6 +12,7 @@ def venv(c):
     """Create a virtual environment."""
     if not Path("venv").exists():
         c.run("python3 -m venv venv --clear")
+        c.run("venv/bin/pip install setuptools wheel")
         c.run("venv/bin/pip install --editable .")
         c.run("venv/bin/pip install -r requirements.txt")
 
